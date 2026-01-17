@@ -5,6 +5,7 @@
 
 ```
 sudo adduser user
+usermod -aG sudo user
 su - user
 ```
 
@@ -90,7 +91,7 @@ wget -O archive.tar.xz https://github.com/alexsys87/Antminer_S9_OpenWRT/raw/refs
 make menuconfig
 ```
 
-В меню конфигурации выберите нужные опции для вашего устройства
+В меню конфигурации выберите нужные опции для вашего устройства. Если Antminer S9 не появился выполните rm -rf tmp/ потом еще раз make menuconfig
 
 6.Сборка тулчейна:
 
@@ -106,7 +107,7 @@ make -j$(nproc) V=s
 
 Установка в nand
 
-Выполнете в консоле
+Выполнете в консоле Antminer S9
 
 ```
 nand_install
